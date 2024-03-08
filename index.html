@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanna be my GF?</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+    <div>
+        <h1>Do you wanna be my girlfriend?</h1>
+        <div class='buttons'>
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var moveButton = document.querySelector("button:nth-child(2)");
+        var correctlyButton = document.querySelector("button:first-child");
+
+        moveButton.addEventListener("click", function () {
+            var vertical = Math.floor(Math.random() * 400);
+            var horizontal = Math.floor(Math.random() * 400);
+            moveButton.style.position = "absolute";
+            moveButton.style.marginLeft = vertical + "px";
+            moveButton.style.marginTop = horizontal + "px";
+        });
+
+        correctlyButton.addEventListener("click", function () {
+            alert("Ainda não vale de verdade, mas já gostei de saber da resposta 🥰");
+        });
+    </script>
+</body>
+</html>
+
+</html>
+
