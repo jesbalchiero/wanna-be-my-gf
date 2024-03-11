@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanna be my GF?</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wanna be my GF?</title>
+        <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-</head>
-<body>
-    <div>
-        <h1>Do you wanna be my girlfriend?</h1>
-        <div class='buttons'>
-          <button>Yes</button>
-          <button>No</button>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    </head>
+    <body>
+        <div>
+            <h1>Do you wanna be my girlfriend?</h1>
+            <div class='buttons'>
+            <button id="btnYesOption">Yes</button>
+            <button id="btnNoOption">No</button>
+            </div>
         </div>
-    </div>
 
-    <script type="text/javascript">
-        var moveButton = document.querySelector("button:nth-child(2)");
-        var correctlyButton = document.querySelector("button:first-child");
+        <script type="text/javascript">
+            var moveButton = document.getElementById("btnNoOption");
 
-        moveButton.addEventListener("click", function () {
-            var vertical = Math.floor(Math.random() * 400);
-            var horizontal = Math.floor(Math.random() * 400);
-            moveButton.style.position = "absolute";
-            moveButton.style.marginLeft = vertical + "px";
-            moveButton.style.marginTop = horizontal + "px";
-        });
+            moveButton.addEventListener("click", function () {
+                moveButton.style.position = "absolute";
+                moveButton.style.marginLeft = Math.floor(Math.random() * 400) + "px";
+                moveButton.style.marginTop = Math.floor(Math.random() * 400) + "px";
+            });
 
-        correctlyButton.addEventListener("click", function () {
-            alert("Ainda não vale de verdade, mas já gostei de saber da resposta 🥰");
-        });
-    </script>
-</body>
+            document.getElementById("btnYesOption").addEventListener("click", () => {
+                alert("🥰"); // Apply the message
+            });
+        </script>
+    </body>
 </html>
-
-</html>
-
